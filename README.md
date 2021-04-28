@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # GroceryListGenerator
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.2.
@@ -30,3 +31,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 # grocery-list-generator
 an easy way to plan meals and shop for groceries
 >>>>>>> origin/main
+=======
+# grocery-list-generator
+an easy way to plan meals and shop for groceries
+>>>>>>> 8966fc6bc13a3ca1fb907f030b7cf7853120683e
