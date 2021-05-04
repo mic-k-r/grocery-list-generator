@@ -1,0 +1,18 @@
+h1, h2 {
+    font-family: 'Monoton', cursive;
+    text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+        1px 1px 0 #000;
+    color: #c9f5ce;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
