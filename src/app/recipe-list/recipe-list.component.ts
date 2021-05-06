@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Recipe } from '../recipe';
 
 @Component({
   selector: 'recipe-list',
@@ -7,11 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecipeListComponent implements OnInit {
 
-  constructor() { }
+  recipeList: Recipe[]; 
+
+  constructor() { 
+      this.recipeList = [
+        new Recipe("Red Snapper with Italian Salsa Verde", 
+                  "1 lb red snapper, 2 onions, 1 bunch parsley", 
+                  "1. Cook red snapper in a cast iron pan, 2. Add the salsa verde.")
+      ];
+   }
 
   ngOnInit() {
   }
-
-  recipes: Array<String> = ["Red Snapper with Italian Salsa Verde", "Shrimp Scampi", "Punjabi Aloo Beans", "Homemade Breakfast Hummus", "Sourdough Bread", "Whole Wheat Rotis"]
 
 }
