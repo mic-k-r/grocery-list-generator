@@ -4,6 +4,15 @@
 
 <div class="container">
     <ul>
-        <li *ngFor = "let recipe of recipes">{{recipe.name}}</li>
+        <li *ngFor = "let recipe of recipes" (click)="onSelect(recipe)">{{recipe.name}}</li>
+    </ul>
+</div>
+
+<div class="container" *ngIf="selectedRecipe">
+    <ul>
+        <li>{{selectedRecipe.name}}</li>
+        <li>{{selectedRecipe.id}}</li>
+        <li>{{selectedRecipe.ingredients}}</li>
+        <li>{{selectedRecipe.instructions}}</li>
     </ul>
 </div>
