@@ -1,18 +1,7 @@
-// import { Ingredient } from './ingredient';
+import { Ingredient } from './ingredient';
 
-export class Recipe {
-    nextId: number = 1;
-    id: number;
+export interface Recipe {
     name: string;
-    // ingredients: Ingredient[];
-    ingredients: string;
+    ingredients: Ingredient[];
     instructions: string;
-
-    constructor(name: string, ingredients: string, instructions: string) {
-        this.name = name;
-        this.ingredients = ingredients;
-        this.instructions = instructions;
-        this.id = this.nextId;
-        this.nextId++;
-    }
 }
