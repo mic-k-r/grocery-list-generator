@@ -6,5 +6,8 @@ export const INGREDIENTS: Ingredient[] = [
     { name: "green beans", unit: "lb" },
     { name: "parsley", unit: "bunch" },
     { name: "potato", unit: "lb" },
-    { name: "raw shrimp", unit: "lb"}
+    { name: "raw shrimp", unit: "lb"},
+    { name: "lemon", unit: "unit" },
+    { name: "salt", unit: "teaspoon" },
+    { name: "black pepper", unit: "teaspoon"}
 ];
