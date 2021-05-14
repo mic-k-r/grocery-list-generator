@@ -1,5 +1,5 @@
-import { Recipe } from './recipe';
-import { Ingredient } from './ingredient';
+import { Recipe } from './interfaces/recipe';
+import { Ingredient } from './interfaces/ingredient';
 import { INGREDIENTS } from './mock-ingredients';
 
 export const RECIPES: Recipe[] = [

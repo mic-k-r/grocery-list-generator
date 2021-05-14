@@ -1,4 +1,4 @@
-import { Ingredient } from './ingredient';
+import { Ingredient } from './interfaces/ingredient';
 
 export const INGREDIENTS: Ingredient[] = [
     { name: "red snapper", unit: "lb" },
