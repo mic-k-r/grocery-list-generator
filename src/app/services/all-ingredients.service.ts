@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Ingredient } from '../interfaces/ingredient';
 import { INGREDIENTS } from '../mock-ingredients';
+import { Recipe } from '../interfaces/recipe';
 
 @Injectable({
   providedIn: 'root'
@@ -13,17 +14,13 @@ export class AllIngredientsService {
     return INGREDIENTS;
   }
 
-  //need a function that takes in array of strings ingredientNames
-  //searches through INGREDIENTS and finds object name properties that match the param
-  //takes corresponding Ingredient object and adds it into an array of Ingredients
-  //returns Ingredients array
-  //assigns this array as ingredients property to recipe
-
+  //searches through INGREDIENTS and finds the corresponding ingredient
   findIngredient(ingredientName: string): Ingredient {
     let ingredient: Ingredient = INGREDIENTS.find(i => i.name === ingredientName)
     return ingredient;
   }
 
+  //takes the ingredient object and adds it to an array
   createIngredientsArray(ingredientNames: string[]): Ingredient[] {
     let ingredients: Ingredient[] = [];
       for(let name of ingredientNames) {
@@ -31,5 +28,11 @@ export class AllIngredientsService {
         ingredients.push(ingredient);
       }
     return ingredients;  
+  }
+
+  //assigns array of ingredients to a recipe
+  assignIngredientsToRecipe(ingredientsArray: Ingredient[], recipe: Recipe) {
+    let returnedRecipe = Object.assign(recipe, ingredientsArray);
+    return returnedRecipe;
   }
 }
