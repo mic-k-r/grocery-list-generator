@@ -10,6 +10,7 @@
 
 <div class="container" *ngIf="selectedRecipe">
     <ul>
-        <li>{{selectedRecipe.name}}</li>
+        <li>{{selectedRecipe.description}}<a routerLink="/recipe-details"> See more.</a></li>
     </ul>
 </div>
+<router-outlet></router-outlet>

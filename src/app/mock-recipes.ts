@@ -49,7 +49,7 @@ export const RECIPES: Recipe[] = [
     },
     { 
         id: 3, 
-        name: "red snapper with italian salsa verde", 
+        name: "Red Snapper with Italian Salsa Verde", 
         description: "An incredible, Mediterranean-inspired recipe. I like to imagine that this is what the ancient Romans ate for breakfast, but who knows. Also, I saw Curtis Stone cook this on TV.",
         ingredients: [
             "1 lb red snapper",
