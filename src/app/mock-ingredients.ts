@@ -1,7 +1,6 @@
 import { Ingredient } from './interfaces/ingredient';
 
-//what am I going to do about quantities? and how can I make them dynamic?
-//initialize the quantity to zero and then update it later somehow with a function?
+// this code is not used in the current application.
 export const INGREDIENTS: Ingredient[] = [
     { name: "red snapper", quantity: 0, unit: "lb" },
     { name: "onion", quantity: 0, unit: "unit" },
