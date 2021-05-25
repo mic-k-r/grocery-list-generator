@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  title = 'Easy Meal Planning';
+  subtitle = 'What\'s cooking this week?';
+
   constructor() { }
 
   ngOnInit() {

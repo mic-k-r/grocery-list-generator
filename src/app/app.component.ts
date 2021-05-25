@@ -7,5 +7,4 @@ import { Recipe } from './interfaces/recipe';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Easy Meal Planning';
 }
