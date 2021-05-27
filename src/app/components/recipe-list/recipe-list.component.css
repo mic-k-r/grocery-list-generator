@@ -16,6 +16,10 @@ ul {
     justify-content: center;
 }
 
+.highlighted {
+    background-color: #c9f5ce;
+}
+
 a {
     position: relative;
     text-decoration: none;

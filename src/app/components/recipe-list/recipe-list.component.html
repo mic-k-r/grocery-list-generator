@@ -10,6 +10,10 @@
 
 <div class="container" *ngIf="selectedRecipe">
     <ul>
-        <li>{{selectedRecipe.description}}<a routerLink="/recipe-details"> See more.</a></li>
+        <li>{{selectedRecipe.description}}
+            <span class="highlighted">
+                <a routerLink="/recipe-details"> See more.</a>
+            </span>
+        </li>
     </ul>
 </div>
