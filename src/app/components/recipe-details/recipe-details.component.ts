@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Recipe } from '../../interfaces/recipe';
 import { RecipesService } from '../../services/recipes.service';
 import { ActivatedRoute } from '@angular/router';
-import { Location } from '@angular/common';
+import { GroceryListService } from '../../services/grocery-list.service';
 
 @Component({
   selector: 'app-recipe-details',
@@ -16,7 +16,7 @@ export class RecipeDetailsComponent implements OnInit {
   constructor(
     private recipesService: RecipesService,
     private activatedRoute: ActivatedRoute,
-    private location: Location
+    private groceryListService: GroceryListService
   ) {}
 
   ngOnInit() {
@@ -29,6 +29,8 @@ export class RecipeDetailsComponent implements OnInit {
       .subscribe(recipe => this.recipe = recipe);
   }
 
-  //get ingredients?
-  //get instructions?
+  addToList(recipe: Recipe) {
+    this.groceryListService.addToList(recipe);
+    window.alert('You\'ve added a recipe to your grocery list!');
+  }
 }

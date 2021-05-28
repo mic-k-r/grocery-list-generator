@@ -1,5 +1,6 @@
 <h2>{{ recipe.name }}</h2>
 <h3>{{ recipe.description }}</h3>
+<button (click)='addToList(recipe)'>Add to Grocery List!</button>
 <div>
     <ul *ngFor='let ingredient of recipe.ingredients'>
         <li>{{ ingredient }}</li>
