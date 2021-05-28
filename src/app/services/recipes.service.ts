@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Recipe } from '../interfaces/recipe';
 import { RECIPES } from '../mock-recipes';
-import { Router } from '@angular/router';
 import { Observable, of } from 'rxjs';
 
 
@@ -10,7 +9,7 @@ import { Observable, of } from 'rxjs';
 })
 export class RecipesService {
 
-  constructor(private router:Router) {}
+  constructor() {}
 
   getRecipes(): Observable<Recipe[]> {
     const recipes = of(RECIPES);
