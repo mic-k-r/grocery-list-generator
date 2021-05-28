@@ -17,20 +17,8 @@ export class RecipesService {
     return recipes;
   }
 
-  getRecipeId(recipe: Recipe): number {
-    return recipe.id;
-  }
-
-  findRecipeById(id: number): Recipe {
-    let selectedRecipe: Recipe = RECIPES.find(recipe => recipe.id === id);
-    return selectedRecipe;
-  }
-
-  viewRecipeDetails(recipe: Recipe): void {
-    //selects a recipe
-    //determines id
-    //routes to recipe view with the appropriate id
-    let id = recipe.id;
-    this.router.navigate(['/recipe-details'])
+  getRecipe(id: number): Observable<Recipe> {
+    const recipe = RECIPES.find(r => r.id === id);
+    return of(recipe);
   }
 }

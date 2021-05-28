@@ -43,7 +43,7 @@ a::before {
     transition: all 0.3s ease-in-out 0s;
   }
 
-  a:hover::before {
+a:hover::before {
     visibility: visible;
     transform: scaleX(1);
   }

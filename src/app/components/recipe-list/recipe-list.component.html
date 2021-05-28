@@ -4,15 +4,17 @@
 
 <div class="container">
     <ul>
-        <li *ngFor = "let recipe of recipes" (click)="onSelect(recipe)">{{recipe.name}}</li>
+        <span class="underlined">
+            <li *ngFor = "let recipe of recipes" (click)="onSelect(recipe)">{{recipe.name}}</li>
+        </span>
     </ul>
 </div>
 
 <div class="container" *ngIf="selectedRecipe">
     <ul>
         <li>{{selectedRecipe.description}}
-            <span class="highlighted">
-                <a routerLink="/recipe-details"> See more.</a>
+            <span class="highlighted" class="underlined">
+                <a routerLink="/recipe-details/{{selectedRecipe.id}}"> See more.</a>
             </span>
         </li>
     </ul>
