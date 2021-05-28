@@ -28,4 +28,7 @@ export class RecipeDetailsComponent implements OnInit {
     this.recipesService.getRecipe(id)
       .subscribe(recipe => this.recipe = recipe);
   }
+
+  //get ingredients?
+  //get instructions?
 }
