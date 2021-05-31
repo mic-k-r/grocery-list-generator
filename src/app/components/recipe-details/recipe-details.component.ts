@@ -31,6 +31,5 @@ export class RecipeDetailsComponent implements OnInit {
 
   addToList(recipe: Recipe) {
     this.groceryListService.addToList(recipe);
-    window.alert('You\'ve added a recipe to your grocery list!');
   }
 }

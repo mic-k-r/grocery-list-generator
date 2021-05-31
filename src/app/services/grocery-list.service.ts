@@ -10,15 +10,20 @@ export class GroceryListService {
 
   constructor() { }
 
-  addToList(recipe: Recipe) {
-    this.groceryList.push(recipe);
+  addToList(recipe: Recipe): void {
+    if(!this.groceryList.includes(recipe)) {
+      this.groceryList.push(recipe);
+      window.alert('You\'ve added a recipe to your grocery list!');
+    } else {
+      window.alert('You\'ve already added that recipe.');
+    }
   }
 
-  getGroceryList() {
+  getGroceryList(): Recipe[] {
     return this.groceryList;
   }
 
-  clearList() {
+  clearList(): Recipe[] {
     this.groceryList = [];
     return this.groceryList;
   }
