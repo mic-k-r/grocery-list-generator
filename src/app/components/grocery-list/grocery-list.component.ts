@@ -8,11 +8,17 @@ import { GroceryListService } from 'src/app/services/grocery-list.service';
 })
 export class GroceryListComponent implements OnInit {
 
-  groceryList = this.groceryListService.getGroceryList();
+  recipeList = this.groceryListService.getRecipeList();
+  groceryListGenerated: boolean = false;
 
   constructor(private groceryListService: GroceryListService) { }
 
   ngOnInit() {
+  }
+
+  generateGroceryList() {
+    this.groceryListGenerated = true;
+    this.groceryListService.generateGroceryList(this.recipeList);
   }
 
 }

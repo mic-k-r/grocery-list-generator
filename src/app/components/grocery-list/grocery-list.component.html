@@ -1,6 +1,14 @@
 <h2>Grocery List</h2>
 <h3>These are the recipes you're planning to make:</h3>
 
-<div *ngFor='let recipe of groceryList'>
+<div *ngFor='let recipe of recipeList'>
     <span>{{ recipe.name }}</span>
+</div>
+
+<button (click)='generateGroceryList()'>Generate My Grocery List!</button>
+
+<div *ngIf='!groceryListGenerated'>
+    <div *ngFor='let ingredient of allIngredientsArray'>
+        <span>{{ ingredient }}</span>
+    </div>
 </div>

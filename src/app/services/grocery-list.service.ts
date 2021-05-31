@@ -6,25 +6,35 @@ import { Recipe } from '../interfaces/recipe';
 })
 export class GroceryListService {
 
-  groceryList: Recipe[] = [];
-
   constructor() { }
 
+  recipeList: Recipe[] = [];
+
   addToList(recipe: Recipe): void {
-    if(!this.groceryList.includes(recipe)) {
-      this.groceryList.push(recipe);
+    if(!this.recipeList.includes(recipe)) {
+      this.recipeList.push(recipe);
       window.alert('You\'ve added a recipe to your grocery list!');
     } else {
       window.alert('You\'ve already added that recipe.');
     }
   }
 
-  getGroceryList(): Recipe[] {
-    return this.groceryList;
+  getRecipeList(): Recipe[] {
+    return this.recipeList;
   }
 
   clearList(): Recipe[] {
-    this.groceryList = [];
-    return this.groceryList;
+    this.recipeList = [];
+    return this.recipeList;
+  }
+  
+  generateGroceryList(recipeList: Recipe[]): string[] {
+    let allIngredientsArray: string[] = [];
+    for (let recipe of recipeList) {
+      for (let ingredient of recipe.ingredients) {
+        allIngredientsArray.push(ingredient);
+      }
+    }
+    return allIngredientsArray;
   }
 }
