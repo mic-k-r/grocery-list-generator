@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GroceryListService } from 'src/app/services/grocery-list.service';
+import { Recipe } from '../../interfaces/recipe';
 
 @Component({
   selector: 'app-grocery-list',
@@ -8,17 +9,18 @@ import { GroceryListService } from 'src/app/services/grocery-list.service';
 })
 export class GroceryListComponent implements OnInit {
 
-  recipeList = this.groceryListService.getRecipeList();
+  recipeList: Recipe[] = [];
   groceryListGenerated: boolean = false;
 
   constructor(private groceryListService: GroceryListService) { }
 
   ngOnInit() {
+    this.recipeList = this.groceryListService.getRecipeList()
   }
 
-  generateGroceryList() {
+  generateGroceryList(recipeList) {
     this.groceryListGenerated = true;
-    this.groceryListService.generateGroceryList(this.recipeList);
+    this.groceryListService.generateGroceryList(recipeList);
   }
 
 }

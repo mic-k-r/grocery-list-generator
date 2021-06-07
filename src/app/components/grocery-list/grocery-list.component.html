@@ -5,9 +5,10 @@
     <span>{{ recipe.name }}</span>
 </div>
 
-<button (click)='generateGroceryList()'>Generate My Grocery List!</button>
+<button (click)='generateGroceryList(recipeList)'>Generate My Grocery List!</button>
 
-<div *ngIf='!groceryListGenerated'>
+<div *ngIf='groceryListGenerated'>
+    <p>it works!</p>
     <div *ngFor='let ingredient of allIngredientsArray'>
         <span>{{ ingredient }}</span>
     </div>
